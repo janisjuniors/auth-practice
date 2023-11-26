@@ -17,8 +17,8 @@ export class AppComponent {
   public isAuthenticated: boolean = false;
 
   public user: UserData = {
-    firstName: 'Jānis',
-    lastName: 'Šņoriņš',
-    email: 'test@gmail.com'
+    firstName: 'Auth',
+    lastName: 'Practitioner',
+    email: 'practitioner@gmail.com'
   }
 }
