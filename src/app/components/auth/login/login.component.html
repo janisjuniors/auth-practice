@@ -1,0 +1,25 @@
+<div class="container">
+  <h2 class="title">Login form</h2>
+
+  <div class="login-form">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="auth@example.com" [formControl]="email" required>
+      @if (email.invalid) {
+        <mat-error>{{ getEmailErrorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [formControl]="password" required>
+      @if (email.invalid) {
+        <mat-error>{{ getPasswordErrorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <button class="button" mat-raised-button color="primary" (click)="login()">
+    Login
+  </button>
+</div>

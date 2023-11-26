@@ -1,0 +1,41 @@
+<div class="container">
+  <h2 class="title">Registration form</h2>
+
+  <div class="registration-form">
+    <mat-form-field>
+      <mat-label>First name</mat-label>
+      <input matInput type="text" [formControl]="firstName" required>
+      @if (firstName.invalid) {
+        <mat-error>{{ getFirstNameErrorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Last name</mat-label>
+      <input matInput type="text" [formControl]="lastName" required>
+      @if (lastName.invalid) {
+        <mat-error>{{ getLastNameErrorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="auth@example.com" [formControl]="email" required>
+      @if (email.invalid) {
+        <mat-error>{{ getEmailErrorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [formControl]="password" required>
+      @if (email.invalid) {
+        <mat-error>{{ getPasswordErrorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+
+  <button class="button" mat-raised-button color="primary" (click)="register()">
+    Register
+  </button>
+</div>
