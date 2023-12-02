@@ -4,14 +4,14 @@ import { MatInputModule } from '@angular/material/input';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '../../../services/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { APP_ROUTE_HOME } from '../../../config/app-routes';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, MatInputModule, FormsModule, MatButtonModule, ReactiveFormsModule],
+  imports: [CommonModule, MatInputModule, FormsModule, MatButtonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
 })

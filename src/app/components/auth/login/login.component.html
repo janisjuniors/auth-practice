@@ -17,6 +17,9 @@
         <mat-error>{{ getPasswordErrorMessage() }}</mat-error>
       }
     </mat-form-field>
+
+    Do not have an account?
+    <a routerLink="../register">Register</a>
   </div>
 
   <button class="button" mat-raised-button color="primary" (click)="login()">
